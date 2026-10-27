@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#3e523f" />
+    <meta name="theme-color" content="#42462F" />
     <meta name="description" content="Warm Willow Resilience is a private therapy practice offering a warm, supportive space for healing, growth, and emotional resilience." />
     <title>Warm Willow Resilience | Therapy for a Brighter Tomorrow</title>
-    <link rel="icon" type="image/jpeg" href="assets/warm-willow-logo.jpg" />
+    <link rel="icon" type="image/svg+xml" href="assets/warm-willow-icon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
@@ -18,11 +18,15 @@
 
     <header class="site-header" id="top">
       <div class="header-inner container">
-        <a class="brand" href="#top" aria-label="Warm Willow Resilience, back to top">
-          <img src="assets/warm-willow-logo.jpg" alt="" width="200" height="200" />
+        <a class="brand" href="#top">
+          <picture>
+            <source media="(max-width: 47.5rem)" srcset="assets/warm-willow-icon.svg" />
+            <img src="assets/warm-willow-horizontal.svg" alt="Warm Willow Resilience – Home" width="2048" height="473" />
+          </picture>
         </a>
         <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
-          <span></span><span></span><span></span>
+          <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="menu-label">Menu</span>
         </button>
         <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
           <a href="#welcome">Welcome</a>
@@ -35,33 +39,36 @@
 
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
+        <img class="hero-image" src="assets/warm-willow-hero.jpg" alt="A willow tree beside a calm lake at sunrise" width="1536" height="1024" fetchpriority="high" />
+        <div class="hero-copy container">
           <div class="hero-copy-inner">
-            <p class="eyebrow"><span class="eyebrow-line"></span> A SPACE TO FEEL SUPPORTED</p>
-            <h1 id="hero-title">Stay rooted.<br /><em>Grow gently.</em><br />Begin again.</h1>
-            <p class="hero-description">Life can feel heavy. You deserve a space to pause, feel heard, and find a steadier way forward. At Warm Willow Resilience, healing begins with being met exactly where you are.</p>
+            <p class="hero-kicker">Warm Willow Resilience</p>
+            <h1 id="hero-title">Therapy for a<br /><em>brighter tomorrow.</em></h1>
+            <p class="hero-intro">You don’t need to have it all figured out first. Find compassionate support, steadier ground, and a way forward that feels like your own.</p>
             <div class="hero-actions">
               <a class="button button-dark" href="#contact">Let's connect <span aria-hidden="true">↗</span></a>
-              <a class="text-link" href="#about">Explore our practice <span aria-hidden="true">↓</span></a>
             </div>
           </div>
-        </div>
-        <div class="hero-visual">
-          <img src="assets/willow-lake.png" alt="Sunrise over a still lake beneath the branches of a willow tree" fetchpriority="high" width="1696" height="944" />
         </div>
       </section>
 
       <section class="welcome section-pad" id="welcome" aria-labelledby="welcome-title">
         <div class="container welcome-grid">
           <div class="welcome-intro">
-            <p class="eyebrow eyebrow-gold">01 / A WARM WELCOME</p>
             <h2 id="welcome-title">A softer place<br />to <em>land.</em></h2>
           </div>
           <div class="welcome-copy">
-            <p class="lead">I'm glad you've found your way here.</p>
-            <p>Starting therapy can bring up a lot of questions. At Warm Willow Resilience, you'll have space to talk honestly about what's happening in your life and what you hope might change.</p>
-            <p>We can begin with what's on your mind today and move at a pace that feels right for you.</p>
-            <a class="underlined-link" href="#about">Get to know me and the practice <span aria-hidden="true">↗</span></a>
+            <div class="welcome-column">
+              <p class="lead">Do your thoughts race long after the day is done?</p>
+              <p>Are you running on empty, pushing through stress and burnout while feeling disconnected from yourself? Maybe a major life transition has left you unsure of who you are or where you’re headed. Anxiety, depression, low self-esteem, and relationship challenges can make everyday life feel heavy, but you don’t have to carry it alone.</p>
+              <p>I support adults at every stage, from college students and young adults to busy professionals and older adults. With compassionate support, you can feel calmer, rebuild your confidence, and rediscover hope.</p>
+            </div>
+            <div class="welcome-column">
+              <p>I can work with you as you navigate anxiety, stress, burnout, and depression, along with self-esteem, relationship challenges, and life transitions. Whether you’re a college student finding your footing, a professional stretched thin, or an older adult facing a new chapter, therapy can help you quiet worry, lift your mood, set healthy boundaries, and feel more confident in who you are and where you’re headed.</p>
+              <p>You can experience a warm, judgment-free space where you can slow down and feel heard. With CBT, you can notice and shift the thoughts that fuel anxiety and low mood. DBT skills can help calm overwhelming emotions and stress. My trauma-informed, strengths-based approach can help you gain clarity, build coping skills, and move forward with confidence.</p>
+              <p>Reaching out for support can feel like a big step, especially when you’re already exhausted. You don’t need to have it all figured out first. Change often begins with small, steady steps, and over time you can start to feel more grounded, more confident, and more like yourself again.</p>
+              <a class="underlined-link" href="#about">Get to know me and the practice <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </div>
         <div class="welcome-decoration" aria-hidden="true">W</div>
@@ -71,29 +78,32 @@
         <div class="container">
           <div class="section-heading support-heading">
             <div>
-              <p class="eyebrow eyebrow-gold">02 / ROOM FOR YOUR STORY</p>
               <h2 id="support-title">Whatever season<br />you're in, <em>there is room.</em></h2>
             </div>
           </div>
           <div class="support-list">
-            <article class="support-item"><span class="support-number">01</span><div><h3>When life feels heavy</h3><p>Make space for stress, overwhelm, and emotions that have been hard to hold alone.</p></div></article>
-            <article class="support-item"><span class="support-number">02</span><div><h3>When things are changing</h3><p>Find steadiness as you move through uncertainty, transitions, or a new chapter.</p></div></article>
-            <article class="support-item"><span class="support-number">03</span><div><h3>When connection feels hard</h3><p>Explore your relationships, your needs, and what it means to feel understood.</p></div></article>
-            <article class="support-item"><span class="support-number">04</span><div><h3>When you're ready to grow</h3><p>Reconnect with yourself and make room for the kind of life you want to build.</p></div></article>
+            <article class="support-item"><h3>When life feels heavy</h3><p>Make space for stress, overwhelm, and emotions that have been hard to hold alone.</p></article>
+            <article class="support-item"><h3>When things are changing</h3><p>Find steadiness as you move through uncertainty, transitions, or a new chapter.</p></article>
+            <article class="support-item"><h3>When connection feels hard</h3><p>Explore your relationships, your needs, and what it means to feel understood.</p></article>
+            <article class="support-item"><h3>When you're ready to grow</h3><p>Reconnect with yourself and make room for the kind of life you want to build.</p></article>
           </div>
         </div>
       </section>
 
       <section class="about section-pad" id="about" aria-labelledby="about-title">
         <div class="container about-grid">
-          <figure class="about-photo">
-            <img src="assets/headshot.png" alt="Portrait of the therapist at Warm Willow Resilience" loading="lazy" width="1070" height="1470" />
-          </figure>
+          <div class="about-portrait">
+            <img src="assets/headshot.png" alt="Portrait of the therapist at Warm Willow Resilience" width="1070" height="1470" loading="lazy" />
+          </div>
           <div class="about-copy">
-            <p class="eyebrow eyebrow-gold">03 / ABOUT ME &amp; THE PRACTICE</p>
             <h2 id="about-title">A little about<br /><em>who you'll meet.</em></h2>
-            <p>I believe therapy works best when you feel comfortable being yourself. My hope is to offer a welcoming place where we can look at what's difficult, make room for what matters, and find a way forward together.</p>
-            <p>Warm Willow Resilience is a practice shaped by warmth, curiosity, and the belief that growth can happen at your own pace.</p>
+            <div class="about-text">
+              <p>I believe therapy works best when you feel comfortable being yourself. My hope is to offer a welcoming place where we can look at what's difficult, make room for what matters, and find a way forward together.</p>
+              <p>Warm Willow Resilience is a practice shaped by warmth, curiosity, and the belief that growth can happen at your own pace.</p>
+              <p>When I’m not working, you’ll often find me staying active through marathon running, swimming, and cycling. Being active is something I truly enjoy, and I believe that taking care of our physical health can have such a positive impact on our mental and emotional well-being. I especially enjoy encouraging and supporting others in finding ways to care for themselves and feel strong, confident, and connected.</p>
+              <p>I also love spending time with animals and being involved in my community. Volunteering and connecting with others through community activities are important to me because I value creating meaningful relationships and making a positive difference in the lives of those around me. These experiences are a big part of who I am and continue to shape the way I connect with others in my work as a therapist.</p>
+              <p>I believe therapy is about more than working through challenges—it’s about feeling supported, finding connection, discovering your strengths, and creating a life that feels meaningful to you.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -102,21 +112,57 @@
         <div class="container contact-grid">
           <div>
             <h2 id="contact-title">Let's begin with<br /><em>a conversation.</em></h2>
-          </div>
-          <div class="contact-action">
-            <a class="button button-cream" href="mailto:info@warmwillowresilience.com?subject=Therapy%20Inquiry">Connect <span aria-hidden="true">↗</span></a>
+            <p class="contact-intro">I offer a 15-minute phone consultation to answer any questions and determine if we’re a good fit.</p>
             <a class="contact-email" href="mailto:info@warmwillowresilience.com">info@warmwillowresilience.com</a>
           </div>
+          <form class="consultation-form" aria-describedby="form-privacy form-status">
+            <div class="form-field">
+              <label for="name">Your name <span>(required)</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email <span>(required)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone <span>(optional)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="form-field">
+              <label for="contact-method">Preferred contact method</label>
+              <select id="contact-method" name="contact_method">
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+              </select>
+            </div>
+            <div class="form-field form-field-wide">
+              <label for="meeting-preference">How would you prefer to meet?</label>
+              <select id="meeting-preference" name="meeting_preference">
+                <option value="no-preference">No preference</option>
+                <option value="in-person">In person</option>
+                <option value="online">Online</option>
+              </select>
+            </div>
+            <p class="form-privacy" id="form-privacy">Please don’t share health or emergency information here. We’ll talk privately when we connect.</p>
+            <button class="button form-submit" type="submit" disabled>Submit request</button>
+            <p class="form-status" id="form-status">Online requests are coming soon. For now, please reach out by email.</p>
+          </form>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" aria-label="Site footer">
       <div class="container footer-main">
-        <a class="brand footer-brand" href="#top" aria-label="Warm Willow Resilience, back to top">
-          <img src="assets/warm-willow-logo.jpg" alt="" width="200" height="200" />
-        </a>
-        <nav aria-label="Footer navigation"><a href="#welcome">Welcome</a><a href="#support">How we help</a><a href="#about">About me</a><a href="#contact">Contact</a></nav>
+        <div class="footer-identity">
+          <a class="brand footer-brand" href="#top">
+            <img src="assets/warm-willow-horizontal-reversed.svg" alt="Warm Willow Resilience – Home" width="2048" height="473" />
+          </a>
+          <p>Therapy for a brighter tomorrow.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation"><a href="#welcome">Welcome</a><a href="#support">How we help</a><a href="#about">About me</a></nav>
+        <aside class="crisis-note" aria-label="Crisis information">
+          <p><strong>In crisis?</strong> This practice can’t respond to emergencies. Call or text <a href="tel:988">988</a> (Suicide &amp; Crisis Lifeline) or call <a href="tel:911">911</a>.</p>
+        </aside>
       </div>
       <div class="container footer-bottom"><small>© <span id="year"></span> Warm Willow Resilience</small><a href="#top">Back to top ↑</a></div>
     </footer>
